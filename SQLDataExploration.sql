@@ -7,8 +7,6 @@ AND location = 'United Kingdom'
 ORDER BY 1, 2
 
 --Total Cases vs Population--
-
---Shows the
 SELECT location, date, population, total_cases,
 (CONVERT(float, total_cases)/NULLIF(CONVERT(float, population), 0))*100 AS PopInfectedPercentage
 FROM [dbo].[CovidDeaths]
